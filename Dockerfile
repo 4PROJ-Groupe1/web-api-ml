@@ -2,7 +2,8 @@ FROM python:3.8-slim-buster
 
 WORKDIR /app
 
-RUN pip3 install flask flask_cors
+RUN pip3 install flask flask_cors numpy pandas apyori
+RUN set FLASK_APP=app.py
 
 COPY . .
 
